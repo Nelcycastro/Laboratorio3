@@ -7,7 +7,7 @@ var valid = {
   },
   checkPassword: function (password) {
     var exp = /^\w{1,}@\w{1,}[.]\w{2,3}$/g
-    if (email.match(exp) == null) {
+    if (password.match(exp) == null) {
       return false;
     }
     return true;
