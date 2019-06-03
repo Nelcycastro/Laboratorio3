@@ -13,11 +13,11 @@ router.post('/user', async(req, res) => {
     return;
   }
   if (!valid.checkPassword(params.password)){
-    res.status(300).json({msn: "La contraseña incorrecta, debe comezar con una letra mayúscula minimamente 6 caracteres"});
+    res.status(300).json({msn: "La contraseña incorrecta, debe empezar con una letra mayúscula minimamente 6 caracteres"});
     return;
   }
   if (!valid.checkEmail(params.email)){
-    res.status(300).json({msn: "email invàlido"});
+    res.status(300).json({msn: "email invàlidos"});
     return;
   }
   var users = new USER(params);

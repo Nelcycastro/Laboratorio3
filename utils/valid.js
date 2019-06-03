@@ -6,14 +6,14 @@ var valid = {
     return false;
   },
   checkPassword: function (password) {
-    var exp = /^\w{1,}@\w{1,}[.]\w{2,3}$/g
+    var exp = /^\w{1,}\w{1,}/g;
     if (password.match(exp) == null) {
       return false;
     }
     return true;
   },
   checkEmail: function(email) {
-    var exp = /[A-Z][0-9]{1,6}\w{1,}$/g
+    var exp = /^\w{1,}@\w{1,}[.]\w{2,3}$/g;
     if (email.match(exp) == null) {
       return false;
     }
